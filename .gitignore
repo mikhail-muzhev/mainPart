@@ -1,6 +1,4 @@
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
 build/
@@ -17,10 +15,131 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
+#Xcode >9
+*.moved-aside
+Last login: Tue Jul 24 21:56:12 on ttys000
+ …/projects                                                                                                ✔  2322  10:59:58
+ …/projects  mc                                                                                            ✔  2322  10:59:59
+
+git status
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	TemplateProject.xcworkspace/xcshareddata/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ …/TemplateProject-ios   sync ?  git status                                                              ✔  2324  11:00:10
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	TemplateProject.xcworkspace/xcshareddata/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ …/TemplateProject-ios   sync ● ?  git status                                                            ✔  2324  11:02:36
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	TemplateProject.xcworkspace/xcshareddata/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ …/TemplateProject-ios   sync ● ?                                                                        ✔  2324  11:03:33
+ …/projects                                                                                                ✔  2323  11:03:47
+ …/projects                                                                                                ✔  2324  11:03:49
+ …/projects                                                                                                ✔  2324  11:03:49
+ …/projects                                                                                                ✔  2324  11:03:49
+ …/projects                                                                                                ✔  2324  11:03:49
+ …/projects                                                                                                ✔  2324  11:03:50
+ …/projects  mc                                                                                            ✔  2324  11:03:50
+
+git status
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ …/TemplateProject-ios   sync ●  git add .                                                               ✔  2326  11:04:21
+ …/TemplateProject-ios   sync ✚  git commit -m '* change .gitignore'                                     ✔  2327  11:04:23
+[sync b02ebf4] * change .gitignore
+ 1 file changed, 5 insertions(+)
+ …/TemplateProject-ios   sync ↑1  git push                                                               ✔  2328  11:04:35
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote:
+remote: To create a merge request for sync, visit:
+remote:   http://git.ltst.su/ios/TemplateProject-ios/merge_requests/new?merge_request%5Bsource_branch%5D=sync
+remote:
+To git.ltst.su:ios/TemplateProject-ios.git
+   5952e2d..b02ebf4  sync -> sync
+ …/TemplateProject-ios   sync  git status                                                                ✔  2329  11:04:41
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+nothing to commit, working tree clean
+ …/TemplateProject-ios   sync  open TemplateProject.xcworkspace                                          ✔  2330  11:04:43
+ …/TemplateProject-ios   sync  git status                                                                ✔  2331  11:04:47
+On branch sync
+Your branch is up-to-date with 'origin/sync'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	TemplateProject.xcworkspace/xcshareddata/
+
+nothing added to commit but untracked files present (use "git add" to track)
+ …/TemplateProject-ios   sync ?                                                                          ✔  2332  11:04:51
+ …/TemplateProject-ios   sync ?                                                                          ✔  2332  11:05:07
+ …/TemplateProject-ios   sync ?                                                                          ✔  2332  11:05:07
+
+ …/TemplateProject-ios   sync ?                                                                          ✔  2332  11:05:08
+
+ …/TemplateProject-ios   sync ?                                                                          ✔  2332  11:05:08
+ …/TemplateProject-ios   sync ?  git status                                                              ✔  2332  11:05:08
+# Xcode
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+#Xcode 9
+TemplateProject.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
 ## Other
 *.moved-aside
-*.xccheckout
-*.xcscmblueprint
+*.xcuserstate
 
 ## Obj-C/Swift specific
 *.hmap
@@ -37,32 +156,45 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
-# Package.resolved
+-- INSERT --
+
+## Other
+*.moved-aside
+*.xcuserstate
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
 .build/
 
 # CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
+Pods
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+# Carthages
 Carthage/Build
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
+# R.swift framework
+*.generated.swift
 
+# fastlane
+fastlane/README.md
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
+fastlane/screenshots
 fastlane/test_output
+IPA/
+
+#CPD
+cpd-output.xml
