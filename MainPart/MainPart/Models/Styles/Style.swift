@@ -363,7 +363,7 @@ enum LabelStyle {
                 $0.font = R.font.ptRootUIMedium(size: 20)
                 $0.lineHeight = 22
                 $0.textAlignment = .left
-                $0.textColor = .lawyerInPocketTitleBlack
+                $0.textColor = .foreground
             }
         case .blackBoldRight18:
             return Style<AttributedLabel> {

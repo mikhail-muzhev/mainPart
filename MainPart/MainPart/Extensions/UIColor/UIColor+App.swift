@@ -10,6 +10,10 @@ import UIKit
 
 extension UIColor {
 
+    class var foreground: UIColor? {
+        return UIColor(named: "foreground")
+    }
+
     class var background: UIColor? {
         return UIColor(named: "background")
     }
