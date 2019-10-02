@@ -9,6 +9,10 @@
 import UIKit
 
 extension UIColor {
+
+    class var background: UIColor? {
+        return UIColor(named: "background")
+    }
     
     /// 0, 118, 255
     class var brightBlue: UIColor {

@@ -66,6 +66,18 @@ class ViewController: BaseViewController {
         animateVideoViewAppearing()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     // MARK: - UI settings
 
     private func addSubviews() {
@@ -119,10 +131,9 @@ class ViewController: BaseViewController {
     // MARK: - Actions
 
     @objc private func okButtonDidPressed() {
-        
+        let viewController = DarkModeViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
-
-    
 
 }
 
