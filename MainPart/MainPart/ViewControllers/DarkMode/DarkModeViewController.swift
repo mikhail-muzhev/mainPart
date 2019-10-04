@@ -28,6 +28,10 @@ class DarkModeViewController: BaseViewController {
         return imageView
     }()
 
+    private lazy var imageView: UIImageView = {
+        return UIImageView(image: #imageLiteral(resourceName: "avocado"))
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +46,7 @@ class DarkModeViewController: BaseViewController {
     }
 
     private func addSubviews() {
-        view.addSubviews(descriptionLabel, tutorialImageView, nextButton)
+        view.addSubviews(descriptionLabel, tutorialImageView, nextButton, imageView)
     }
 
     private func configureConstraints() {
@@ -60,6 +64,13 @@ class DarkModeViewController: BaseViewController {
             $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(30)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
+        }
+        imageView.snp.makeConstraints {
+            $0.top.equalTo(descriptionLabel.snp.bottom).offset(20)
+            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().offset(20)
+            $0.width.equalTo(imageView.snp.height).multipliedBy(1 / 1)
+            $0.bottom.lessThanOrEqualTo(nextButton.snp.bottom).offset(-20)
         }
     }
 
