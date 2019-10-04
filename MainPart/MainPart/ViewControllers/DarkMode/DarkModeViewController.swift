@@ -80,7 +80,7 @@ class DarkModeViewController: BaseViewController {
     }
 
     @objc private func nextButtonDidPressed() {
-        
+        navigationController?.pushViewController(PhotoViewController(), animated: true)
     }
 
 }
