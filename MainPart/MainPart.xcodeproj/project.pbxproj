@@ -46,6 +46,7 @@
 		8F3E63D92341A07B008B7198 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3E63D82341A07B008B7198 /* R.generated.swift */; };
 		8FB87AB123449208005857EA /* DarkModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB87AB023449208005857EA /* DarkModeViewController.swift */; };
 		8FB87AB3234493A6005857EA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB87AB2234493A6005857EA /* BaseNavigationController.swift */; };
+		8FB87AD123473E62005857EA /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB87AD023473E62005857EA /* PhotoViewController.swift */; };
 		8FBD1711233C9CD200F95A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1710233C9CD200F95A7A /* AppDelegate.swift */; };
 		8FBD1713233C9CD200F95A7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1712233C9CD200F95A7A /* SceneDelegate.swift */; };
 		8FBD1715233C9CD200F95A7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD1714233C9CD200F95A7A /* ViewController.swift */; };
@@ -164,6 +165,7 @@
 		8F3E63D82341A07B008B7198 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8FB87AB023449208005857EA /* DarkModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewController.swift; sourceTree = "<group>"; };
 		8FB87AB2234493A6005857EA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		8FB87AD023473E62005857EA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		8FBD170D233C9CD200F95A7A /* MainPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD1710233C9CD200F95A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBD1712233C9CD200F95A7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -418,6 +420,14 @@
 			path = DarkMode;
 			sourceTree = "<group>";
 		};
+		8FB87ACF23473E2C005857EA /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				8FB87AD023473E62005857EA /* PhotoViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		8FBD1704233C9CD200F95A7A = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +494,7 @@
 		8FBD174C233C9D6600F95A7A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8FB87ACF23473E2C005857EA /* Photo */,
 				8FBD1767233CA2ED00F95A7A /* Base */,
 				8FB87AAF234491D7005857EA /* DarkMode */,
 				8FBD174D233C9D7E00F95A7A /* Main */,
@@ -853,6 +864,7 @@
 				8F1F823E234231520020D720 /* VideoView.swift in Sources */,
 				8FB87AB3234493A6005857EA /* BaseNavigationController.swift in Sources */,
 				8F3E63AA23419EF7008B7198 /* NSParagraphStyle+Styles.swift in Sources */,
+				8FB87AD123473E62005857EA /* PhotoViewController.swift in Sources */,
 				8FBD1713233C9CD200F95A7A /* SceneDelegate.swift in Sources */,
 				8F223135233E342700CBEDC7 /* UIView+Subviews.swift in Sources */,
 			);
