@@ -184,6 +184,7 @@ enum ButtonStyle {
 // swiftlint:disable type_body_length
 enum LabelStyle {
 
+    case alwaysBlackMediumLeft
     case whiteBoldRight17
     case whiteBoldRight24
     case whiteMediumRight20
@@ -364,6 +365,13 @@ enum LabelStyle {
                 $0.lineHeight = 22
                 $0.textAlignment = .left
                 $0.textColor = .foreground
+            }
+        case .alwaysBlackMediumLeft:
+            return Style<AttributedLabel> {
+                $0.font = R.font.ptRootUIMedium(size: 20)
+                $0.lineHeight = 22
+                $0.textAlignment = .left
+                $0.textColor = UIColor(0)
             }
         case .blackBoldRight18:
             return Style<AttributedLabel> {

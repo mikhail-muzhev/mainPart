@@ -35,7 +35,7 @@ class ViewController: BaseViewController {
 
     private lazy var descriptionLabel: AttributedLabel = {
         let label = AttributedLabel(text: R.string.localizable.main_intro_description(),
-                                    style: .blackMediumLeft20)
+                                    style: .alwaysBlackMediumLeft)
         return label
     }()
 
