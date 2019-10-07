@@ -19,6 +19,7 @@ class PhotoViewController: BaseViewController {
         let button = AttributedButton(style: .whiteMediumCenter20)
         button.setTitleForAllStates(R.string.localizable.dark_mode_next_title())
         button.addTarget(self, action: #selector(nextButtonDidPressed), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
 
@@ -27,6 +28,8 @@ class PhotoViewController: BaseViewController {
         
         button.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
         button.addTarget(self, action: #selector(cameraButtonDidPressed), for: .touchUpInside)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 10
         return button
     }()
 
@@ -67,7 +70,7 @@ class PhotoViewController: BaseViewController {
             $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.width.equalTo(cameraButton.snp.height).multipliedBy(1 / 1)
-            $0.bottom.lessThanOrEqualTo(nextButton.snp.bottom).offset(-20)
+            $0.bottom.lessThanOrEqualTo(nextButton.snp.top).offset(-20)
         }
     }
 
@@ -77,10 +80,11 @@ class PhotoViewController: BaseViewController {
     }
 
     @objc private func cameraButtonDidPressed() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.cameraCaptureMode = .photo
-        present(imagePicker, animated: true)
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = .camera
+        present(myPickerController, animated: true)
     }
 
     @objc private func nextButtonDidPressed() {
@@ -90,5 +94,14 @@ class PhotoViewController: BaseViewController {
 }
 
 extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+        cameraButton.imageView?.contentMode = .scaleAspectFit
+        cameraButton.setImage(image, for: .normal)
+        nextButton.isHidden = false
+        descriptionLabel.text = R.string.localizable.photo_done_description()
+        picker.dismiss(animated: true)
+    }
+
 }
