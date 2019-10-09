@@ -12,6 +12,17 @@ class ARViewController: UIViewController {
 
     private var imageConfiguration: ARImageTrackingConfiguration?
     
+    private lazy var backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white05
+        view.layer.cornerRadius = 14
+        return view
+    }()
+
+    private lazy var descriptionLabel: AttributedLabel = {
+        return AttributedLabel(text: R.string.localizable.ar_description(), style: .blackMediumLeft18)
+    }()
+    
     private lazy var sceneView: ARSCNView = {
         let sceneView = ARSCNView()
         sceneView.delegate = self
@@ -45,9 +56,26 @@ class ARViewController: UIViewController {
     }
 
     private func configureUI() {
-        view.addSubview(sceneView)
+        view.backgroundColor = .background
+        title = R.string.localizable.ar_title()
+        addSubviews()
+        configureConstraints()
+    }
+
+    private func addSubviews() {
+        backgroundView.addSubview(descriptionLabel)
+        view.addSubviews(sceneView, backgroundView)
+    }
+
+    private func configureConstraints() {
         sceneView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        backgroundView.snp.makeConstraints {
+            $0.leading.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        descriptionLabel.snp.makeConstraints {
+            $0.edges.equalToSuperview().inset(12)
         }
     }
 
