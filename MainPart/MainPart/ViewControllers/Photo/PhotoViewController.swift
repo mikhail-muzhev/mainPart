@@ -88,7 +88,8 @@ class PhotoViewController: BaseViewController {
     }
 
     @objc private func nextButtonDidPressed() {
-        
+        let arViewController = ARViewController()
+        navigationController?.pushViewController(arViewController, animated: true)
     }
 
 }
