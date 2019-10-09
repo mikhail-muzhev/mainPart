@@ -101,7 +101,16 @@ extension PhotoViewController: UIImagePickerControllerDelegate, UINavigationCont
         cameraButton.setImage(image, for: .normal)
         nextButton.isHidden = false
         descriptionLabel.text = R.string.localizable.photo_done_description()
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWith:contextInfo:)), nil)
         picker.dismiss(animated: true)
+    }
+    
+
+    @objc private func image(_ image: UIImage, didFinishSavingWith error: Error?, contextInfo: UnsafeRawPointer) {
+        guard let error = error else { return }
+        let alert = UIAlertController(title: "Ошибка сохранения", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 
 }

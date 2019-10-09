@@ -62,6 +62,8 @@
 	</dict>
     <key>NSCameraUsageDescription</key>
     <string>Камера требуется для создания фотографий</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Доступ к галерее нужен для сохранения фото</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
