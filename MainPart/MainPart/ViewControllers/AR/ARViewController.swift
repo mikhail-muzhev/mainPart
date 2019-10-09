@@ -19,6 +19,13 @@ class ARViewController: UIViewController {
         return view
     }()
 
+    private lazy var resultImageView: UIImageView = {
+        let image = UIImageView(image: #imageLiteral(resourceName: "open"))
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 14
+        return image
+    }()
+
     private lazy var descriptionLabel: AttributedLabel = {
         return AttributedLabel(text: R.string.localizable.ar_description(), style: .blackMediumLeft18)
     }()
@@ -85,7 +92,10 @@ extension ARViewController: ARSCNViewDelegate {
 
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
-        handleFoundImage(imageAnchor, node)
+        DispatchQueue.main.async {
+            self.handleFoundImage(imageAnchor, node)
+        }
+        
     }
 
     private func handleFoundImage(_ imageAnchor: ARImageAnchor, _ node: SCNNode) {
@@ -93,19 +103,18 @@ extension ARViewController: ARSCNViewDelegate {
       print("you found a \(name) image")
 
       let size = imageAnchor.referenceImage.physicalSize
-      if let videoNode = makeDinosaurVideo(size: size) {
+      if let videoNode = changeDetectedImage(size: size) {
         node.addChildNode(videoNode)
         node.opacity = 1
       }
     }
     
-    private func makeDinosaurVideo(size: CGSize) -> SCNNode? {
-        
+    private func changeDetectedImage(size: CGSize) -> SCNNode? {
         let avMaterial = SCNMaterial()
+        let imageView = resultImageView
         DispatchQueue.main.async {
-            avMaterial.diffuse.contents = UIImageView(image: #imageLiteral(resourceName: "avocado"))
+            avMaterial.diffuse.contents = imageView
         }
-        
         let videoPlane = SCNPlane(width: size.width, height: size.height)
         videoPlane.materials = [avMaterial]
         
