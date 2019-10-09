@@ -6,4 +6,31 @@
 //  Copyright © 2019 Live Typing. All rights reserved.
 //
 
-import Foundation
+import ARKit
+
+class ARViewController: UIViewController {
+
+    private lazy var sceneView: ARSCNView = {
+        let sceneView = ARSCNView()
+        sceneView.delegate = self
+        return sceneView
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureUI()
+    }
+
+    private func configureUI() {
+        view.addSubview(sceneView)
+        sceneView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+
+}
+
+extension ARViewController: ARSCNViewDelegate {
+    
+}
