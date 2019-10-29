@@ -28,4 +28,12 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction private func yesDidPressed() {
+        
+    }
+
+    @IBAction private func noDidPressed() {
+        
+    }
+
 }

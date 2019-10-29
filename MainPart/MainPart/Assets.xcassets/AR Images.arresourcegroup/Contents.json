@@ -5,7 +5,10 @@
   },
   "resources" : [
     {
-      "filename" : "nefarius.arreferenceimage"
+      "filename" : "avtonomer.arreferenceimage"
+    },
+    {
+      "filename" : "toyota2.arreferenceimage"
     }
   ]
 }

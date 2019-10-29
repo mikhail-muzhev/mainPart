@@ -79,7 +79,7 @@ class ARViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
         backgroundView.snp.makeConstraints {
-            $0.leading.top.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            $0.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         descriptionLabel.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(12)
