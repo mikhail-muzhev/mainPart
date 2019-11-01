@@ -7,6 +7,7 @@
 //
 
 import ARKit
+import CoreML
 
 class ARViewController: UIViewController {
 
@@ -103,10 +104,13 @@ extension ARViewController: ARSCNViewDelegate {
       print("you found a \(name) image")
 
       let size = imageAnchor.referenceImage.physicalSize
-      if let videoNode = changeDetectedImage(size: size) {
-        node.addChildNode(videoNode)
-        node.opacity = 1
-      }
+        DispatchQueue.main.async {
+            if let videoNode = self.changeDetectedImage(size: size) {
+              node.addChildNode(videoNode)
+              node.opacity = 1
+            }
+        }
+      
     }
     
     private func changeDetectedImage(size: CGSize) -> SCNNode? {

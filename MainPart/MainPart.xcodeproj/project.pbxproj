@@ -168,7 +168,7 @@
 		8FB87AB023449208005857EA /* DarkModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeViewController.swift; sourceTree = "<group>"; };
 		8FB87AB2234493A6005857EA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8FB87AD023473E62005857EA /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		8FBD170D233C9CD200F95A7A /* MainPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBD170D233C9CD200F95A7A /* Обучение.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Обучение.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD1710233C9CD200F95A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBD1712233C9CD200F95A7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FBD1714233C9CD200F95A7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -453,7 +453,7 @@
 		8FBD170E233C9CD200F95A7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FBD170D233C9CD200F95A7A /* MainPart.app */,
+				8FBD170D233C9CD200F95A7A /* Обучение.app */,
 				8FBD1721233C9CD600F95A7A /* MainPart WatchKit App.app */,
 				8FBD1730233C9CD700F95A7A /* MainPart WatchKit Extension.appex */,
 			);
@@ -606,7 +606,7 @@
 			);
 			name = MainPart;
 			productName = MainPart;
-			productReference = 8FBD170D233C9CD200F95A7A /* MainPart.app */;
+			productReference = 8FBD170D233C9CD200F95A7A /* Обучение.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8FBD1720233C9CD600F95A7A /* MainPart WatchKit App */ = {
@@ -1178,7 +1178,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ltst.MainPart;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Обучение";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ltst.*";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1200,7 +1200,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ltst.MainPart;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Обучение";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ltst.*";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "avtonomer.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "avtonomer@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "avtonomer@3x.png",
+      "filename" : "avtonomer.png",
       "scale" : "3x"
     }
   ],
